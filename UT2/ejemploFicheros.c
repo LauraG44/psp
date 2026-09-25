@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
-#include <fcntl.h>
+#include <unistd.h> // para read, write, close
+#include <fcntl.h> // para open y flags (O_RDONLY, O_WRONLY,...)
 int main(void)
 {
     char saludo[] = "Un saludo!!!\n";
@@ -25,7 +25,7 @@ int main(void)
     fd = open("texto.txt", 0);
     printf("Contenido del Fichero: \n");
 
-    //Leo bytes de 1 em 1 y lo guardo en buffer
+    //Leo bytes de 1 en 1 y lo guardo en buffer
     bytesleidos = read(fd, buffer, 1);
     while (bytesleidos != 0){
         //Pinto byte leído
@@ -33,4 +33,6 @@ int main(void)
         //Leo otro byte
         bytesleidos = read(fd, buffer, 1);
     }
+    close(fd);
+    return 0;
 }
