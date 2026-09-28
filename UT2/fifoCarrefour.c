@@ -23,6 +23,11 @@ int main()
     {
         fp = open("FIFOCarrefour",0);
         bytesleidos = read(fp, buffer, 1);
-        printf("Obteniendo información..."
+        printf("Obteniendo información...");
+        while(bytesleidos!=0)
+        {
+
+            }
+        close(fp);
         }
 }
