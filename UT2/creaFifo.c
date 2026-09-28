@@ -1,9 +1,9 @@
-#include <stdio.h>;
-#include <stdlib.h>;
-#include <fcntl.h>; // para open
-#include <unistd.h>; // para read, close
-#include <sys/types.h>; // para mkfifo
-#include <sys/stat.h>; // para mkfifo
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h> // para open
+#include <unistd.h> // para read, close
+#include <sys/types.h> // para mkfifo
+#include <sys/stat.h> // para mkfifo
 
 
 int main(void)
