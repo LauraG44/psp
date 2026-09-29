@@ -1,6 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <stdio.h> // para entrada y salida de información (printf)
+#include <stdlib.h> // Para system()
+#include <string.h> // Para poder manejar strings y sus funciones (strlen)
 #include <unistd.h> // para read, write, close
 #include <fcntl.h> // para open y flags (O_RDONLY, O_WRONLY,...)
 int main(void)
@@ -9,7 +9,8 @@ int main(void)
     char buffer[10];
     int fd, bytesleidos;
 
-    //Se indica 1 como segundo argumento para abrirlo en modo escritura
+    //Se indica 1 como segundo argumento para abrirlo en modo escritura,
+    // 0 para modo escritura y 2 para ambos
     fd = open("texto.txt", 1);
     if(fd == -1)
     {
