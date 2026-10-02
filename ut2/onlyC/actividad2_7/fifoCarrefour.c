@@ -26,8 +26,10 @@ int main()
         printf("Obteniendo información...");
         while(bytesleidos!=0)
         {
-
-            }
+            printf("%1c", buffer[0]);
+            bytesleidos = read(fp, buffer, 1);
+        }
         close(fp);
         }
+    return 0;
 }
