@@ -3,7 +3,9 @@ import java.io.*;
 public class EjemploComando {
     public static void main (String[] args) throws IOException {
         // cmd /C <comando> ;cierra CMD cuando termina
-        Process p = new ProcessBuilder("CMD", "/C", "DIR").start();
+        //Process p = new ProcessBuilder("CMD", "/C", "DIR").start();
+        Process p = new ProcessBuilder("/usr/bin/ls", "-la").start();
+
 
         try {
             InputStream is = p.getInputStream();
