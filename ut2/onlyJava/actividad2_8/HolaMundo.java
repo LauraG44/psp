@@ -1,4 +1,4 @@
-package psp.ut2.java.holamundo;
+package psp.ut2.onlyJava.holamundo;
 
 public class HolaMundo {
     public static void main(String[] args) {
