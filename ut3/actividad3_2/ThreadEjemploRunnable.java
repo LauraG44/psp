@@ -1,4 +1,4 @@
-package psp.ut3.actividad3_1;
+package psp.ut3.actividad3_2;
 
 public class ThreadEjemploRunnable implements Runnable {
 
@@ -12,6 +12,9 @@ public class ThreadEjemploRunnable implements Runnable {
 
         ThreadEjemploRunnable ejemplo = new ThreadEjemploRunnable();
         Thread hilo1 =  new Thread (ejemplo, "Pepe");
-        Thread hilo1 =  new Thread (ejemplo, "Juan");
+        Thread hilo2 =  new Thread (ejemplo, "Juan");
+        hilo1.start();
+        hilo2.start();
+        System.out.println("Termina thread main");
     }
 }
